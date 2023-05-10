@@ -1,0 +1,169 @@
+<div class="">
+  <section class="bg-gray-100">
+    <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+      <form [formGroup]="ClientForm"   (ngSubmit)="onSubmit()">
+        <div>
+          <h2 class="mb-4 text-xl font-bold text-gray-900">
+            Información del Cliente
+          </h2>
+          <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+            <div class="w-full">
+              <label
+                for="brand"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Nombre</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="brand"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                placeholder="Escribe el nombre aquí..."
+                required="required"
+                formControlName="name"
+              />
+            </div>
+            <div class="w-full">
+              <label
+                for="age"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Edad</label
+              >
+              <input
+                type="number"
+                name="age"
+                id="age"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                placeholder="Ejemplo: 65"
+                required=""
+                formControlName="age"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mt-4">
+          <h2 class="mb-4 text-xl font-bold text-gray-900">
+            Información del Perfil
+          </h2>
+          <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+            <div class="w-full">
+              <label
+                for="career"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Carrera</label
+              >
+              <input
+                type="text"
+                name="career"
+                id="career"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                placeholder="Escribe el nombre aquí..."
+                required=""
+                formControlName="career"
+              />
+            </div>
+            <div class="w-full">
+              <label
+                for="language"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Idioma</label
+              >
+              <input
+                type="text"
+                name="language"
+                id="language"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                placeholder="Ejemplo: Inglés"
+                required=""
+                formControlName="language"
+              />
+            </div>
+            <div class="sm:col-span-2">
+              <label
+                for="name"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Nacionalidad</label
+              >
+              <input
+                type="text"
+                name="nationality"
+                id="nationality"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                placeholder="Ejemplo: Dominicano"
+                required=""
+                formControlName="nationality"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mt-4">
+          <h2 class="mb-4 text-xl font-bold text-gray-900">
+            Información del Dirección
+          </h2>
+          <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+            <div class="w-full">
+              <label
+                for="street"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Calle</label
+              >
+              <input
+                type="text"
+                name="street"
+                id="street"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                placeholder="Ejemplo: Calle Primera"
+                required=""
+                formControlName="street"
+              />
+            </div>
+            <div class="w-full">
+              <label
+                for="apto_no"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >No. de Apartamento</label
+              >
+              <input
+                type="number"
+                name="no_apartment"
+                id="no_apartment"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                placeholder="Ejemplo: 3407"
+                required=""
+                formControlName="no_apartment"
+              />
+            </div>
+            <div class="sm:col-span-2">
+              <label
+                for="city"
+                class="block mb-2 text-sm font-medium text-gray-900"
+                >Ciudad</label
+              >
+              <input
+                type="text"
+                name="city"
+                id="city"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                placeholder="Ejemplo: Santo Domingo"
+                required=""
+                formControlName="city"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-green-600 rounded-lg focus:ring-4 focus:ring-primary-200"
+        >
+         {{isEditting?'Editar Cliente':'Agregar Cliente'}} 
+        </button>
+        <button
+          type="reset"
+          class="ml-4 inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-red-600 rounded-lg focus:ring-4 focus:ring-primary-200"
+        >
+          Limpiar Campos
+        </button>
+      </form>
+    </div>
+  </section>
+</div>
