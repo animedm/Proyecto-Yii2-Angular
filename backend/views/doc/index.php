@@ -15,7 +15,7 @@ $this->title = 'Web API';
    <hr>
  <div class=" text-center ">
    <h1>
-   Endpoits disponibles
+   Endpoints disponibles
    </h1>
    <hr>
  </div>
